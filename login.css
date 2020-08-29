@@ -1,0 +1,163 @@
+/* 공통 코드 */
+* {
+    padding: 0;
+    margin:0; 
+    text-decoration: none;  
+    list-style-type: none;
+    color: black;
+    font-size: 14px;
+}
+/*   헤더  */
+header {
+    background-color: rgb(56, 114, 150);
+    color: rgb(124, 75, 63);
+    height: 200px;    
+}
+/* head-1 box */
+.wrapper.first {
+    display: flex;
+    justify-content: space-between;    
+}
+.side-A{
+    display: flex;    
+}
+.side-A>div {
+    margin-right: 10px;
+}
+.side-B{
+    display: flex;
+}
+.side-B a:hover {
+    color: white;    
+}
+.side-B>div {
+    margin-right: 10px;
+}
+.side-B>div>a {
+    font-size: 12px;
+}
+.side-A, .side-B {
+    padding: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+    margin-right: 20px;
+}
+/* head-2 box */
+.center {
+    text-align: center;    
+}
+div.center {
+    font-size: 13px;
+}
+.center.title a {    
+    font-size: 23px;
+    color: #fff;
+}
+/* login Style */
+.login-state {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+    font-size: 12px;
+    height: 40px;
+    line-height: 1;    
+}
+.login-state-check {
+    font-size: 12px;;
+} 
+.login-state div {
+    padding: 20px;
+}
+.wrapper-login {        
+    border: 1px solid rgba(128, 128, 128, 0.26);
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 400px;
+    height: 480px;    
+    box-shadow: -0.2em -0.2em 10px #0241, 0.2em 0.2em 10px #666;
+}
+form {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+.input {
+    width: 300px;
+    height: 35px;
+    font-size: 14px;
+    margin: 20px;
+    padding-left: 10px;
+    background-color: rgba(118, 209, 212, 0.116);
+    border: 0.5px solid grey;
+}
+.input.login {
+    width: 100px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    background-color: rgba(46, 163, 36, 0.87);
+    border: 1px solid grey;
+    color: white;
+
+}
+.facebook {
+    background-color: rgba(72, 72, 153, 0.836); 
+    width: 280px;
+    height: 25px;
+    margin: 0 auto;   
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    display: flex;
+    padding-bottom: 20px;
+}
+.facebook a {
+    display: block;
+    color: white;
+    width: 280px;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 0.5;
+    margin-top: 20px;    
+   
+}
+.wrapper-member {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 60px;
+    border-top: 1px solid rgba(128, 128, 128, 0.26);
+}
+.member {        
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+    font-size: 14px;        
+}
+.member div {
+    text-align: center;  
+    margin-left: 10px;      
+}
+b span {
+    color: greenyellow;    
+}
+.id {
+    text-align: left;
+    font-size: 12px;
+    margin-left: 50px;
+}
+.L {
+    width: 10px;
+    height: 15px;    
+    position: absolute;
+    top: 23px;
+    left: 221px;
+    border-left: 1px solid rgba(0, 0, 0, 0.363);
+}
+
+#back-to-top {    
+    opacity: 0;    
+}

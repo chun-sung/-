@@ -1,0 +1,246 @@
+/* ---------공통 코드---------- */
+* {
+    padding: 0;
+    margin:0; 
+    text-decoration: none;  
+    list-style-type: none;
+    color: black;
+    font-size: 14px;
+}
+/* -------------헤더-------------  */
+header {
+    background-color: rgb(56, 114, 150);
+    color: rgb(124, 75, 63);
+    height: 200px;    
+}
+/* head-1 box */
+b span {
+    color: greenyellow;    
+}
+.wrapper.first {
+    display: flex;
+    justify-content: space-between;    
+}
+.side-A{
+    display: flex;    
+}
+.side-A>div {
+    margin-right: 10px;
+}
+.side-B{
+    display: flex;
+}
+.side-B a:hover {
+    color: white;    
+}
+.side-B>div {
+    margin-right: 10px;
+}
+.side-B>div>a {
+    font-size: 13px;
+}
+.side-A, .side-B {
+    padding: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+    margin-right: 20px;
+}
+/* head-2 box */
+.center {
+    text-align: center;    
+}
+div.center {
+    font-size: 13px;
+}
+.center.title a {    
+    font-size: 23px;
+    color: #fff;    
+}
+/* head-3 box */
+.nav {        
+    margin: 0 auto;                 
+    margin-top: 50px;
+    padding-left: 150px;
+    width: 900px;
+}
+.nav ul { 
+    display: flex;
+}
+.nav ul li {
+    margin-left: 35px;    
+}
+.nav ul li a {
+    font-size: 16px;
+}
+.menu {
+    position: relative;    
+}
+.menu .menu-item .menu-sub {    
+    position: absolute;
+    top: 30px;    
+    display:none;      
+}
+.menu .menu-item .menu-sub li a {    
+    font-size: 12px;    
+}
+.menu-sub li {
+    padding: 5px;    
+    font-size: 10px;
+}
+.menu .menu-item:hover .menu-sub {
+    display: block;    
+    background-color: white;    
+    padding-right: 30px;
+    box-shadow: -0.2em -0.2em 10px #0241, 0.2em 0.2em 10px #666;      
+}
+.menu-sub:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -13px;
+    right: 0;
+    height: 12px;     
+}
+/* head-4 box */
+.wrapper-path {
+    height: 45px;
+    background-color: rgba(177, 166, 166, 0.3);
+    line-height: 3;
+    color: grey;
+    font-size: 12px;
+    padding-left: 100px;  
+    margin-top: 40px;
+}
+.path {
+    width: 1050px;
+    margin: 0 auto;      
+    height: 45px;
+}
+
+/*  ---------------메인----------------  */
+.main-wrapper {    
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 43px; 
+}
+main { 
+    width: 980px;
+    height: 2000px; 
+    margin-top: 43px;
+    margin-left: 110px;
+    border-left: 1px solid rgba(128, 128, 128, 0.308);
+    border-right: 1px solid rgba(128, 128, 128, 0.308);
+    text-align: center;
+}
+.wrapper-main {
+    display: flex;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid rgba(128, 128, 128, 0.26);
+    font-size: 14px;
+}
+img {
+    margin-top: 140px;
+}
+p {
+    margin-bottom: 80px;
+}
+/* iframe youtube video */
+iframe {
+    box-shadow: -0.2em -0.2em 10px #0241, 0.2em 0.2em 10px #666;
+}
+/* back-to-top */
+#back-to-top {
+    position: fixed;
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    right: 50px;        
+    bottom: 200px;
+    transition-duration: 0.8s;
+    text-decoration: none;
+    border: 1px solid grey;        
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(22, 221, 15, 0.658);
+    margin-bottom: 5px;
+    line-height: 2;
+    box-shadow: -0.2em -0.2em 10px #0241, 0.2em 0.2em 10px #666;
+}
+#back-to-top.visible {
+    opacity: 1;
+}
+/* ----------side-bar---------*/
+.side-bar {
+    position: absolute;    
+    left: -20px;    
+    background-color: rgba(19, 158, 54, 0.356);
+    width: 100px;
+    height: 300px;
+    border-radius: 10px;
+    transition: all 0.1s;
+    font-family: 'Lobster', cursive;
+    box-shadow: -0.2em -0.2em 10px #0241, 0.2em 0.2em 10px #666; 
+}
+.side-bar li {
+    margin: 20px;
+}
+.side-bar a:hover {
+    color: blue;    
+}
+#layer-pop {
+    /* width: 200px; */
+    width: 250px;
+    height: 180px;
+    color: black;
+    position: absolute;
+    top: 250px;
+    left: 25%;
+    margin-left: 80px;
+    text-align: center;
+    background-color: white;
+    border: 7px solid rgba(5, 5, 26, 0.274);
+    background-clip: padding-box;
+    z-index:200;
+    background-color: greenyellow;
+}
+#layer-pop-close {
+    opacity: 1;
+    display: inline-block;
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    margin-top: 0px;    
+    margin-left: 230px;    
+    background-color: rgba(0, 0, 0, 0.2);    
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 1;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    left: -30px;
+    top: 158px;
+}
+#layer-pop-close:hover {
+    color: red;
+  
+}
+#layer-pop.disabled {  
+    opacity: 0;   
+    transition: all 1s;
+}
+#layer-pop-content {    
+    padding-bottom: 100px;
+}
+.layer-pop-line {   
+    padding-top: 5px; 
+    border-top: 1px solid rgba(128, 128, 128, 0.466);
+}
+/*-------------푸터-------------*/
+footer {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.205);
+}
