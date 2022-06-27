@@ -1,4 +1,3 @@
-
 // back-to-top button  & sideBar fixed
 const backToTopBtn = document.querySelector('#back-to-top')
 const docElem = document.documentElement
@@ -17,7 +16,8 @@ window.addEventListener('scroll', () => {
     scrollPos = docElem.scrollTop;
     backToTopBtn.className = (scrollPos > offset) ? 'visible' : '';
     // console.log(scrollPos)
-    sideBar.style.top = `${scrollPos}px`     // sideBar fixed (한줄 추가)    
+     // sideBar fixed (한줄 추가)    
+    // sideBar.style.top = `${scrollPos}px`    
 });
 
 backToTopBtn.addEventListener('click', (e) =>{
@@ -42,16 +42,32 @@ for(menu of linkPrevent){
         e.preventDefault();
     })
 };
+let membership = document.querySelectorAll('.membership>li>a')
+for(mem of membership){
+    mem.addEventListener('click', (e) => {
+        e.preventDefault();        
+    })
+}
 
 // --------Layer-pop-close------------
-if(location.pathname == '/index.html') {
-    const closeBtn = document.querySelector('#layer-pop-close')
-    const layerPop = document.querySelector('#layer-pop')
-        closeBtn.addEventListener('click' ,function() {
-            if(!layerPop.classList.contains('disabled')){
-                layerPop.classList.add('disabled');
-            } 
-    })
-} else {
-    
+const closeBtn = document.querySelector('#layer-pop-close')
+const layerPop = document.querySelector('#layer-pop')
+closeBtn.addEventListener('click' ,function() {
+    if(!layerPop.classList.contains('disabled')){
+        layerPop.classList.add('disabled');
+    } 
+})
+
+//------------login 초기화 코드-----------
+const login = document.querySelector("a[href='/login']");
+const memship = document.querySelector('.membership');
+if(login.textContent == '로그인') {
+    memship.style.display='none'
 }
+
+//------------loginout-----------
+const logout = document.querySelector("a[href='logout']");
+logout.addEventListener('click', () => {
+    login.textContent = '로그인';
+    memship.style.display='none'
+})
